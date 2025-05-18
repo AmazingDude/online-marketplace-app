@@ -188,7 +188,7 @@ public class MainViewController {
         if (loginStage == null) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(MarketplaceApp.class.getResource("login-dialog.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 400, 300);
+                Scene scene = new Scene(fxmlLoader.load(), 400, 500);
                 loginStage = new Stage();
                 loginStage.setTitle("Login / Register");
                 loginStage.initModality(Modality.APPLICATION_MODAL);

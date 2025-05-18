@@ -17,6 +17,10 @@ public class MarketplaceApp extends Application {
         stage.setTitle("My Marketplace");
         stage.setScene(scene);
         stage.show();
+        stage.setMinWidth(420);
+        stage.setMinHeight(560);
+        stage.setResizable(false); // Optional, if fixed size desired
+
     }
 
     public static void main(String[] args) {

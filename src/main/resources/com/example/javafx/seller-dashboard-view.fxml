@@ -5,22 +5,31 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
-
 <?import javafx.scene.layout.HBox?>
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.SellerDashboardController">
+
+<VBox prefHeight="500.0" prefWidth="650.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.javafx.SellerDashboardController"
+      spacing="15"
+      styleClass="dashboard-pane">
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets top="25" right="30" bottom="25" left="30"/>
     </padding>
+
     <children>
-        <Label text="Your Listed Products" style="-fx-font-size: 18; -fx-font-weight: bold;" />
-        <ListView fx:id="productList" prefHeight="300.0" prefWidth="560.0" VBox.vgrow="ALWAYS" />
+        <Label text="Your Listed Products" styleClass="header-label" />
+
+        <ListView fx:id="productList" prefHeight="340.0" styleClass="list-view" VBox.vgrow="ALWAYS"/>
+
         <HBox alignment="CENTER_RIGHT" spacing="10.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#removeSelectedProduct" text="Remove Product" />
-                <Button mnemonicParsing="false" onAction="#closeDashboard" text="Close" />
+                <Button text="Remove Product" onAction="#removeSelectedProduct" styleClass="btn-danger"/>
+                <Button text="Close" onAction="#closeDashboard" styleClass="btn-secondary"/>
             </children>
             <padding>
-                <Insets top="10.0" />
+                <Insets top="10"/>
             </padding>
         </HBox>
     </children>
