@@ -2,8 +2,6 @@
 // Product.java
 package com.example.javafx;
 
-import javafx.fxml.Initializable;
-
 import java.io.Serializable;
 
 public class Product implements Serializable {
@@ -33,16 +31,12 @@ public class Product implements Serializable {
     public void setPrice(double price) { this.price = price; }
     public void setSeller(Seller seller) { this.seller = seller; }
 
+
     @Override
     public String toString() {
-        return "Product{" +
-                "productId=" + productId +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", price=" + price +
-                ", seller=" + seller.getUsername() +
-                '}';
+        return name + " - $" + String.format("%.2f", price) + " (Seller: " + (seller != null ? seller.getUsername() : "N/A") + ")";
     }
+
     public void setProductId(int productId){
         this.productId = productId;
     }
